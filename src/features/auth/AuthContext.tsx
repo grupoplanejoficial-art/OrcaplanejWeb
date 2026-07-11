@@ -12,7 +12,7 @@ interface AuthContextValue {
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
-const mockUser: User = { id: 'mock-user', tenantId: 'mock-tenant', name: 'Administrador Orcaplanej', email: 'admin@orcaplanej.local', role: UserRole.Admin, isActive: true, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
+const mockUser: User = { id: 'mock-user', empresaId: 'mock-empresa', name: 'Administrador Orcaplanej', email: 'admin@orcaplanej.local', role: UserRole.Admin, isActive: true, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(mockUser);
